@@ -1,0 +1,50 @@
+[
+  {
+    "id": "boladefogo",
+    "nome": "Bola de Fogo",
+    "dominios": ["elemental", "profano"],
+    "custo": "3 PM",
+    "alcance": "Médio",
+    "duracao": "Instantânea",
+    "efeito": "Cria uma explosão que causa 6d6 de dano.",
+    "pa_aprimoramento": { "nome": "Explosão Maior", "custo": 2, "efeito": "Aumenta o raio em 3m." },
+    "pm_aprimoramento": { "nome": "Dano Extra", "custo": 1, "efeito": "Soma +1d6 de dano por PM." },
+    "niveis_maiores": "No nível 5, o dano base torna-se 10d6."
+  },
+  {
+    "id": "escudomistico",
+    "nome": "Escudo Místico",
+    "dominios": ["arcano"],
+    "custo": "2 PM",
+    "alcance": "Pessoal",
+    "duracao": "Cena",
+    "efeito": "Cria uma barreira mágica que concede +5 de Defesa.",
+    "pa_aprimoramento": null,
+    "pm_aprimoramento": { "nome": "Reflexo", "custo": 2, "efeito": "Reflete 1d6 de dano a atacantes corpo-a-corpo." },
+    "niveis_maiores": null
+  },
+    {
+    "id": "escudomistico",
+    "nome": "Escudo Místico",
+    "dominios": ["arcano"],
+    "custo": "2 PM",
+    "alcance": "Pessoal",
+    "duracao": "Cena",
+    "efeito": "Cria uma barreira mágica que concede +5 de Defesa.",
+    "pa_aprimoramento": null,
+    "pm_aprimoramento": { "nome": "Reflexo", "custo": 2, "efeito": "Reflete 1d6 de dano a atacantes corpo-a-corpo." },
+    "niveis_maiores": null
+  },
+    {
+    "id": "escudomistico",
+    "nome": "Escudo Místico",
+    "dominios": ["arcano"],
+    "custo": "2 PM",
+    "alcance": "Pessoal",
+    "duracao": "Cena",
+    "efeito": "Cria uma barreira mágica que concede +5 de Defesa.",
+    "pa_aprimoramento": null,
+    "pm_aprimoramento": { "nome": "Reflexo", "custo": 2, "efeito": "Reflete 1d6 de dano a atacantes corpo-a-corpo." },
+    "niveis_maiores": null
+  }
+]

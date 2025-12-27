@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tramapédia - Catálogo de Magias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>TRAMAPÉDIA</h1>
+    </header>
+
+    <main>
+        <section class="filters">
+            <input type="text" id="searchBar" placeholder="Buscar por nome...">
+            
+            <select id="domainFilter">
+                <option value="todos">Todos os Domínios</option>
+                <option value="arcano">Arcano</option>
+                <option value="profano">Profano</option>
+                <option value="elemental">Elemental</option>
+                <option value="primordial">Primordial</option>
+                <option value="celestial">Celestial</option>
+                <option value="abissal">Abissal</option>
+                <option value="astral">Astral</option>
+                <option value="natural">Natural</option>
+            </select>
+
+            <button id="btnFavorites">Ver Favoritos</button>
+        </section>
+
+        <div id="spellContainer" class="spell-grid">
+            </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
