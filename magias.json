@@ -609,5 +609,37 @@
     "alcance": "Curto",
     "duracao": "Instantânea",
     "efeito": "Livra toda comida e bebida não-mágica de venenos e doenças em uma esfera de 1,5m. Não recupera comida já apodrecida, mas a torna segura para consumo."
+  },
+  {
+    "id": "drenar-vida",
+    "tipo": "nível 1",
+    "nome": "Drenar Vida",
+    "dominios": ["profano"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Toque",
+    "duracao": "Instantânea",
+    "efeito": "Drena a vitalidade de um alvo, causando 3 de dano necrótico e recuperando 1 PV para o conjurador.",
+    "pm_aprimoramento": { "nome": "Drenar Vida Aprimorada", "custo": 1, "efeito": "Aumenta o dano e a cura em +1." }
+  },
+    {
+    "id": "furia-de-espirito",
+    "tipo": "nível 1",
+    "nome": "Fúria de Espírito",
+    "dominios": ["profano"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Pessoal",
+    "duracao": "Instantânea",
+    "efeito": "Uma aura de intenção violenta envolve sua arma ou punhos. Seu próximo ataque causa +2 de Dano e, se o alvo for de tamanho Grande ou menor, ele deve passar em uma salvaguarda de força ou ficará atordoado por 1 rodada",
+    "pm_aprimoramento": { "nome": "Impacto brutal", "custo": 1, "efeito": "Aumenta o dano em +1." }
+  },
+  {
+    "id": "golpe-de-zephyr",
+    "tipo": "nível 1",
+    "nome": "Golpe de Zephyr",
+    "dominios": ["elemental", "natural"],
+    "custo": "1 PA + 1 PM",
+    "alcance": "Pessoal",
+    "duracao": "Até 1 minuto (Concentração)",
+    "efeito": "Você se move como o vento. Até o fim dessa magia, seu movimento não provoca ataques de oportunidade. Uma vez até o final da magia, você pode se dar vantagem em uma rolagem de ataque com arma no seu turno. Esse ataque infrige 2 de dano de força adicional caso acerte. Idependente, sua velocidade de movimento aumenta em 1 nível até o final desse turno."
   }
 ]
