@@ -9,12 +9,21 @@ const coresDominios = {
     "natural": "#228b22"
 };
 
+// Mapeamento para ordenação hierárquica
+const pesoNivel = {
+    "truque": 0,
+    "nível 1": 1,
+    "nível 2": 2,
+    "nível 3": 3 // Caso adicione futuramente
+};
+
 let magias = [];
 let favoritos = JSON.parse(localStorage.getItem('tramapedia_favs')) || [];
 
 const container = document.getElementById('spellContainer');
 const searchInput = document.getElementById('searchBar');
 const domainFilter = document.getElementById('domainFilter');
+const levelFilter = document.getElementById('levelFilter'); // Referência ao novo filtro
 const btnFavs = document.getElementById('btnFavorites');
 
 async function init() {
@@ -30,13 +39,28 @@ async function init() {
 function render() {
     const term = searchInput.value.toLowerCase();
     const domain = domainFilter.value;
+    const level = levelFilter.value; // Pega o valor do nível
     const onlyFavs = btnFavs.classList.contains('active');
 
-    const filtradas = magias.filter(m => {
+    // 1. Filtragem
+    let filtradas = magias.filter(m => {
         const matchNome = m.nome.toLowerCase().includes(term);
         const matchDom = domain === 'todos' || m.dominios.some(d => d.toLowerCase() === domain);
+        const matchLevel = level === 'todos' || m.tipo.toLowerCase() === level;
         const matchFav = onlyFavs ? favoritos.includes(m.id) : true;
-        return matchNome && matchDom && matchFav;
+        return matchNome && matchDom && matchLevel && matchFav;
+    });
+
+    // 2. Ordenação Hierárquica (Truque -> Nível 1 -> Nível 2)
+    filtradas.sort((a, b) => {
+        const pesoA = pesoNivel[a.tipo.toLowerCase()] ?? 99;
+        const pesoB = pesoNivel[b.tipo.toLowerCase()] ?? 99;
+        
+        if (pesoA !== pesoB) {
+            return pesoA - pesoB;
+        }
+        // Se forem do mesmo nível, ordena alfabeticamente por nome
+        return a.nome.localeCompare(b.nome);
     });
 
     container.innerHTML = '';
@@ -106,8 +130,10 @@ window.toggleFav = (event, id) => {
     render();
 };
 
+// Event Listeners
 searchInput.addEventListener('input', render);
 domainFilter.addEventListener('change', render);
+levelFilter.addEventListener('change', render); // Escuta o filtro de nível
 btnFavs.addEventListener('click', () => {
     btnFavs.classList.toggle('active');
     btnFavs.innerText = btnFavs.classList.contains('active') ? "Ver Todas" : "Ver Favoritos";
