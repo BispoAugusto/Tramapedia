@@ -1,296 +1,613 @@
 [
-  {
+    {
     "id": "ataquecerteiro",
+    "tipo": "truque",
     "nome": "Ataque Certeiro",
-    "dominios": ["astral", "arcano"],
+    "dominios": ["astral", "natural", "arcano"],
     "custo": "2 PA",
     "alcance": "Médio",
     "duracao": "Até 1 rodada",
-    "efeito": "Você garante uma breve intuição sobre as defesas do alvo. No seu próximo turno, você terá vantagem na primeira jogada de ataque contra ele."
+    "efeito": "Você estende sua percepção para o futuro imediato, enxergando rastros visuais das próximas movimentações do alvo. Até o final do seu próximo turno, você recebe Vantagem na primeira jogada de ataque que realizar contra esta criatura, desde que ela ainda esteja ao seu alcance ou linha de vista. O efeito é cancelado se você perder a concentração ou se o alvo ficar totalmente oculto por meios mágicos."
   },
   {
     "id": "maosmagicas",
+    "tipo": "truque",
     "nome": "Mãos Mágicas",
     "dominios": ["arcano"],
     "custo": "2 PA",
     "alcance": "Médio",
     "duracao": "1 minuto",
-    "efeito": "Cria uma mão espectral flutuante para manipular objetos de até 5 quilos. Pode ser movida 9 metros com uma ação."
+    "efeito": "Uma mão translúcida e flutuante surge em um ponto à sua escolha. Você pode usar sua ação para movê-la até 9 metros e interagir com um objeto (abrir portas destrancadas, guardar/retirar itens, verter poções). A mão não pode atacar, ativar itens mágicos ou carregar mais de 5kg. Ela desaparece se estiver a mais de 18m de você ou se você conjurar a magia novamente."
   },
   {
     "id": "protecaocontralaminas",
+    "tipo": "truque",
     "nome": "Proteção contra Lâminas",
     "dominios": ["arcano"],
     "custo": "2 PA",
-    "alcance": "Médio",
+    "alcance": "Pessoal",
     "duracao": "1 rodada",
-    "efeito": "Cria um campo de força que concede RD 1 contra dano de concusão, cortante e perfurante de armas.",
-    "pa_aprimoramento": { "nome": "Resistência Maior", "custo": 1, "efeito": "A RD aumenta em 1." }
+    "efeito": "Ao traçar um símbolo de guarda no ar, sua pele brilha brevemente com uma tonalidade metálica. Até o início do seu próximo turno, você recebe RD 1 contra danos físicos (concussão, cortante e perfurante) causados por ataques de armas ou projéteis comuns. Este efeito não se aplica a danos mágicos, quedas ou venenos aplicados em lâminas.",
+    "pa_aprimoramento": { "nome": "Resistência Maior", "custo": 1, "efeito": "O campo de força se densifica, aumentando a RD em +1." }
   },
   {
     "id": "rajadadeveneno",
+    "tipo": "truque",
     "nome": "Rajada de Veneno",
-    "dominios": ["profano", "elemental"],
+    "dominios": ["profano", "elemental", "arcano"],
     "custo": "2 PA",
     "alcance": "Muito Curto",
     "duracao": "Instantânea",
-    "efeito": "Projeta um sopro de gás tóxico. O alvo deve passar em teste de Constituição ou sofre 2 de dano de veneno.",
+    "efeito": "Você projeta uma nuvem espessa de gás tóxico e esverdeado de sua palma. Uma criatura dentro do alcance deve realizar um teste de Resistência de Constituição. Em caso de falha, ela inala a toxina e sofre 2 de dano de veneno e fica Envenenada até o início do seu próximo turno (recebendo desvantagem em testes de atributo). Se passar, não sofre nenhum efeito. Criaturas que não respiram são imunes.",
     "niveis_maiores": "O dano aumenta em +1 no nível 5 (3), nível 11 (4) e nível 17 (5)."
   },
   {
     "id": "rajadamistica",
+    "tipo": "truque",
     "nome": "Rajada Mística",
     "dominios": ["profano", "arcano"],
     "custo": "2 PA",
     "alcance": "Muito Longo",
     "duracao": "Instantânea",
-    "efeito": "Dispara um feixe de energia que causa 1 de dano de força com um ataque à distância.",
-    "niveis_maiores": "Cria mais feixes em níveis elevados: dois no nível 5, três no nível 11 e quatro no nível 17."
+    "efeito": "Um feixe de energia crepitante e arroxeada dispara em direção a uma criatura. Realize um ataque mágico à distância contra a Defesa do alvo. Se atingir, o feixe causa 1 de dano de força. Por ser energia pura, este ataque ignora resistências físicas comuns. O impacto empurra objetos leves que não estejam sendo segurados ou carregados.",
+    "niveis_maiores": "Sua maestria permite disparar feixes adicionais: dois no nível 5, três no nível 11 e quatro no nível 17. Você pode mirar em alvos diferentes para cada feixe."
   },
   {
     "id": "ilusaomenor",
+    "tipo": "truque",
     "nome": "Ilusão Menor",
-    "dominios": ["arcano", "astral"],
+    "dominios": ["astral", "arcano"],
     "custo": "2 PA",
     "alcance": "Muito Longo",
     "duracao": "1 rodada",
-    "efeito": "Cria um som ou imagem visual estática que cabe em um cubo de 3 metros.",
-    "pa_aprimoramento": { "nome": "Realismo", "custo": 1, "efeito": "Altera a ilusão para parecer mais realista (mudar direção do som ou piscar)." }
+    "efeito": "Você cria um som ou uma imagem de um objeto em um ponto dentro do alcance. Sons podem variar de um sussurro a um rugido; imagens não podem emitir som, cheiro ou calor e devem caber em um cubo de 3m. Se uma criatura usar uma ação para examinar a ilusão e passar em um teste de Investigação contra sua dificuldade mágica, ela percebe que é falsa e a imagem torna-se translúcida para ela."
   },
   {
     "id": "prestidigitacao",
+    "tipo": "truque",
     "nome": "Prestidigitação",
     "dominios": ["arcano"],
     "custo": "2 PA",
     "alcance": "Muito Curto",
     "duracao": "Até 1 hora",
-    "efeito": "Cria efeitos mágicos simples e inofensivos, como faíscas, limpeza de objetos ou pequenas imagens ilusórias."
+    "efeito": "Você realiza um pequeno truque mágico para utilidade ou distração. Escolha um: 1) Cria um efeito sensorial instantâneo (faíscas, sopro de vento, música baixa). 2) Acende ou apaga uma vela/tocha. 3) Limpa ou suja um objeto de até 1m cúbico. 4) Esfria, aquece ou tempera material não vivo por 1 hora. 5) Cria uma marca ou símbolo em uma superfície por 1 hora. Você pode ter até 3 efeitos não-instantâneos ativos simultaneamente."
   },
   {
     "id": "toquearrepiante",
+    "tipo": "truque",
     "nome": "Toque Arrepiante",
     "dominios": ["profano"],
     "custo": "2 PA",
     "alcance": "Muito Longo",
     "duracao": "1 rodada",
-    "efeito": "Ataque à distância que causa 2 de dano necrótico e impede o alvo de recuperar vida. Mortos-vivos recebem desvantagem em ataques contra você.",
+    "efeito": "Você manifesta uma mão esquelética e fantasmagórica no espaço do alvo. Realize um ataque mágico à distância. Se atingir, o alvo sofre 2 de dano necrótico e uma frieza sepulcral o impede de recuperar Pontos de Vida (por qualquer meio) até o início do seu próximo turno. Se o alvo for um Morto-Vivo, ele também recebe Desvantagem em jogadas de ataque contra você até o fim do efeito.",
     "niveis_maiores": "O dano aumenta em +1 no nível 5 (3), nível 11 (4) e nível 17 (5)."
   },
-  {
+    {
     "id": "armaduradeagathys",
+    "tipo": "nível 1",
     "nome": "Armadura de Agathys",
     "dominios": ["arcano", "elemental"],
     "custo": "2 PA + 1 PM",
     "alcance": "Pessoal",
     "duracao": "1 hora",
-    "efeito": "Recebe 3 de vida temporária. Enquanto tiver esses pontos, atacantes corpo a corpo sofrem 3 de dano de frio.",
-    "pm_aprimoramento": { "nome": "Fortalecer Gelo", "custo": 1, "efeito": "Aumenta a vida temporária e o dano em 1." }
+    "efeito": "Uma geada mágica cobre você e seu equipamento. Você ganha 3 PV temporários toda rodada pela duração. Enquanto esses pontos de vida persistirem, qualquer criatura que atingir você com um ataque corpo a corpo sofre 1 de dano de frio imediato devido aos espinhos de gelo que se estilhaçam contra o agressor. A magia encerra precocemente se os PV temporários chegarem a 0.",
+    "pm_aprimoramento": { "nome": "Fortalecer Gelo", "custo": 1, "efeito": "A camada de gelo se torna mais espessa: os PV temporários e o dano de frio aumentam em +1 para cada PM extra investido." }
   },
   {
     "id": "bracodehadar",
+    "tipo": "nível 1",
     "nome": "Braço de Hadar",
     "dominios": ["profano"],
     "custo": "2 PA + 1 PM",
     "alcance": "Pessoal",
     "duracao": "Instantânea",
-    "efeito": "Tentáculos causam 2 de dano necrótico em área e impedem reações. Teste de Força reduz dano à metade.",
-    "pm_aprimoramento": { "nome": "Fome Sombria", "custo": 1, "efeito": "O dano aumenta em 1." }
+    "efeito": "Você invoca tentáculos de energia negra que chicoteiam a partir do seu corpo em um raio curto. Todas as criaturas na área devem realizar um teste de Resistência de Força. Em caso de falha, sofrem 2 de dano necrótico e não podem realizar Reações até o início do próximo turno delas. Em caso de sucesso, sofrem apenas metade do dano e mantêm suas reações.",
+    "pm_aprimoramento": { "nome": "Fome Sombria", "custo": 1, "efeito": "Os tentáculos tornam-se maiores e mais vorazes, aumentando o dano necrótico em +1." }
   },
   {
     "id": "bruxaria",
+    "tipo": "nível 1",
     "nome": "Bruxaria",
-    "dominios": ["arcano", "profano"],
+    "dominios": ["profano", "arcano"],
     "custo": "2 PA + 1 PM",
     "alcance": "Longo",
     "duracao": "Até 1 hora",
-    "efeito": "Amaldiçoa um alvo para causar +1 de dano necrótico extra por ataque e dar desvantagem em testes de um atributo.",
-    "pm_aprimoramento": { "nome": "Maldição Potente", "custo": 1, "efeito": "O dano extra aumenta em +1." }
+    "efeito": "Você amaldiçoa uma criatura que pode ver dentro do alcance. Escolha um atributo (Força, Destreza, etc); o alvo tem Desvantagem em testes de atributo com a perícia escolhida. Além disso, sempre que você atingir o alvo com um ataque, ele sofre 1 de dano necrótico extra. Se o alvo morrer antes da magia acabar, você pode usar uma ação em um turno subsequente para transferir a maldição para uma nova criatura.",
+    "pm_aprimoramento": { "nome": "Maldição Potente", "custo": 1, "efeito": "A marca de bruxa torna-se mais agressiva, aumentando o dano extra necrótico em +1." }
   },
   {
     "id": "compreenderidiomas",
+    "tipo": "nível 1",
     "nome": "Compreender Idiomas",
-    "dominios": ["arcano"],
+    "dominios": ["astral", "arcano"],
     "custo": "2 PA + 1 PM",
     "alcance": "Pessoal",
     "duracao": "1 hora",
-    "efeito": "Entende o significado literal de qualquer idioma falado ou escrito."
+    "efeito": "Pela duração, você compreende o significado literal de qualquer linguagem falada que ouvir. Você também entende qualquer linguagem escrita que tocar, precisando de cerca de 1 minuto para ler uma página. Esta magia não revela mensagens secretas em códigos ou criptografias, nem permite que você fale ou escreva no idioma, apenas que o entenda."
   },
   {
     "id": "enfeitiçarpessoa",
+    "tipo": "nível 1",
     "nome": "Enfeitiçar Pessoa",
     "dominios": ["astral", "arcano"],
     "custo": "2 PA + 1 PM",
     "alcance": "Médio",
     "duracao": "1 hora",
-    "efeito": "Um humanoide falha em teste de Sabedoria e passa a te considerar um conhecido amigável.",
-    "pm_aprimoramento": { "nome": "Amizade Coletiva", "custo": 1, "efeito": "Pode afetar uma criatura adicional." }
+    "efeito": "Você tenta seduzir mentalmente um humanoide que possa ver. Ele deve realizar um teste de Resistência de Sabedoria (com Vantagem se você ou seus aliados estiverem lutando contra ele). Se falhar, ele fica Enfeitiçado e considera você um conhecido amigável. Quando a magia acabar, a criatura saberá que foi enfeitiçada por você e sua atitude pode se tornar hostil.",
+    "pm_aprimoramento": { "nome": "Amizade Coletiva", "custo": 1, "efeito": "Sua aura de encanto se expande, permitindo afetar uma criatura humanoide adicional que esteja a até 9m do primeiro alvo." }
   },
   {
     "id": "escritailusoria",
+    "tipo": "nível 1",
     "nome": "Escrita Ilusória",
     "dominios": ["astral", "arcano"],
     "custo": "2 PA + 1 PM",
     "alcance": "Toque",
     "duracao": "10 dias",
-    "efeito": "Cobre um texto com uma ilusão que só pode ser lida por você e criaturas designadas."
+    "efeito": "Você escreve em um pergaminho ou superfície e imbui o texto com uma ilusão. Para observadores comuns, o texto parece uma escrita estrangeira, um código sem sentido ou um texto completamente diferente do original. Você e até cinco criaturas designadas no momento da conjuração podem ver o texto real. Um usuário de magia pode perceber a ilusão com um teste de Investigação, mas não lerá o conteúdo real sem magias de dissipação.",
+    "pa_aprimoramento": null
   },
   {
     "id": "protecaocontraobememal",
+    "tipo": "nível 1",
     "nome": "Proteção contra o Bem e Mal",
-    "dominios": ["astral", "arcano", "celestial"],
+    "dominios": ["astral", "arcano"],
     "custo": "2 PA + 1 PM",
     "alcance": "Toque",
-    "duracao": "Até 10 minutos",
-    "efeito": "Protege contra tipos específicos de criaturas, dando desvantagem em ataques contra o alvo e imunidade a possessão/medo."
+    "duracao": "Até 10 minutos (Concentração)",
+    "efeito": "Uma barreira invisível protege uma criatura voluntária contra seres extraplanares (celestiais, feéricos, ínferos, elementais ou mortos-vivos). Essas criaturas têm Desvantagem em jogadas de ataque contra o alvo protegido. Além disso, o alvo não pode ser Enfeitiçado, Aterrorizado ou Possuído por tais seres. Se o alvo já estiver sob um desses efeitos, ele recebe Vantagem em novos testes de resistência para encerrá-los.",
+    "pa_aprimoramento": null
   },
   {
     "id": "raiodebruxa",
+    "tipo": "nível 1",
     "nome": "Raio de Bruxa",
     "dominios": ["profano", "elemental"],
     "custo": "2 PA + 1 PM",
     "alcance": "Médio",
-    "duracao": "Até 1 minuto",
-    "efeito": "Cria um arco elétrico que causa 2 de dano inicial. Pode usar 2 PA nos turnos seguintes para repetir o dano automaticamente.",
-    "pm_aprimoramento": { "nome": "Carga Extra", "custo": 1, "efeito": "O dano inicial aumenta em 1." }
+    "duracao": "Até 1 minuto (Concentração)",
+    "efeito": "Um feixe de relâmpagos azuis estala entre você e o alvo. Realize um ataque mágico à distância. Se atingir, causa 2 de dano elétrico inicial. Em cada um dos seus turnos seguintes, você pode usar 2 PA para causar automaticamente 2 de dano elétrico ao alvo. A magia acaba se você usar sua ação para outra coisa, se o alvo sair do alcance ou se ele tiver cobertura total contra você.",
+    "pm_aprimoramento": { "nome": "Carga Extra", "custo": 1, "efeito": "A intensidade da corrente elétrica aumenta, somando +1 ao dano inicial por PM investido." }
   },
   {
     "id": "recuoacelerado",
+    "tipo": "nível 1",
     "nome": "Recuo Acelerado",
     "dominios": ["arcano"],
     "custo": "1 PA + 1 PM",
     "alcance": "Pessoal",
-    "duracao": "Até 10 minutos",
-    "efeito": "Aumenta a velocidade, permitindo usar a ação de Disparada com apenas 1 PA."
+    "duracao": "Até 10 minutos (Concentração)",
+    "efeito": "Suas pernas tornam-se leves e ágeis como o vento. Pela duração, sua velocidade de movimento dobra e você pode realizar a ação de Desengajar ou Disparada usando apenas 1 PA em vez de 2."
   },
   {
     "id": "repreensaoinfernal",
+    "tipo": "nível 1",
     "nome": "Repreensão Infernal",
-    "dominios": ["profano", "elemental"],
+    "dominios": ["profano", "elemental", "arcano"],
     "custo": "Reação (1 PA) + 1 PM",
     "alcance": "Longo",
     "duracao": "Instantânea",
-    "efeito": "Reage ao dano envolvendo o atacante em chamas para 3 de dano de fogo (Teste de Destreza reduz à metade).",
-    "pm_aprimoramento": { "nome": "Chamas Vingativas", "custo": 1, "efeito": "O dano aumenta em 1." }
+    "efeito": "Você aponta o dedo para uma criatura que acabou de te causar dano e ela é envolta em chamas infernais. O alvo deve realizar um teste de Resistência de Destreza. Se falhar, sofre 3 de dano de fogo. Se passar, sofre apenas metade do dano. Esta magia só pode ser usada como uma Reação imediata após receber um ataque.",
+    "pm_aprimoramento": { "nome": "Chamas Vingativas", "custo": 1, "efeito": "O fogo torna-se mais quente e persistente, aumentando o dano em +1." }
   },
   {
     "id": "servoinvisivel",
+    "tipo": "nível 1",
     "nome": "Servo Invisível",
     "dominios": ["arcano"],
     "custo": "2 PA + 1 PM",
     "alcance": "Longo",
     "duracao": "1 hora",
-    "efeito": "Cria uma força invisível para tarefas simples como limpar ou buscar objetos."
+    "efeito": "Você cria uma força sem forma, mente ou visibilidade que obedece aos seus comandos. O servo tem Defesa 10 e 1 PV, e não pode atacar. Ele pode realizar tarefas domésticas simples: servir comida, limpar, amarrar cordas ou buscar itens. Ele se move em uma distância curta por turno e sempre permanece a uma distância longa de você. Se o servo receber qualquer dano ou se afastar demais, ele se dissipa."
   },
   {
+    "id": "marca-do-cacador",
+    "tipo": "nível 1",
+    "nome": "Marca do Caçador",
+    "dominios": ["primordial", "natural"],
+    "custo": "1 PA + 1 PM",
+    "alcance": "Longo",
+    "duracao": "Até 1 hora (Concentração)",
+    "efeito": "Você foca seus instintos em uma criatura que pode ver, marcando-a magicamente como sua presa. Até o fim da magia, você causa 1 de dano extra sempre que atingir o alvo com um ataque com arma. Além disso, você recebe Vantagem em qualquer teste de Percepção ou Sobrevivência feito para localizar ou rastrear o alvo. Se o alvo cair a 0 PV, você pode usar 1 PA para mover a marca para uma nova criatura.",
+    "pm_aprimoramento": { "nome": "Foco Implacável", "custo": 1, "efeito": "Sua conexão com a presa se torna mortal, aumentando o dano extra em +1." }
+  },
+  {
+    "id": "bom-fruto",
+    "tipo": "nível 1",
+    "nome": "Bom Fruto",
+    "dominios": ["natural"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Toque",
+    "duracao": "24 horas",
+    "efeito": "Você toca uma planta e faz brotar 3 bagas mágicas infundidas com energia vital. Uma criatura pode usar 1 PA para comer uma baga e recuperar 1 PV, além de saciar a fome por um dia inteiro. No entanto, o excesso de mana vital é tóxico: se uma criatura comer mais de 3 bagas em um período de 24 horas, ela sofre Enjoo por Mana, recebendo 1 nível de exaustão imediatamente. As bagas perdem o poder após 24 horas.",
+    "pm_aprimoramento": { "nome": "Colheita abundante", "custo": 1, "efeito": "Mais +1 bagas crescem na planta." }
+  },
+  {
+    "id": "falar-com-animais",
+    "tipo": "nível 1",
+    "nome": "Falar com Animais",
+    "dominios": ["primordial", "natural"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Pessoal",
+    "duracao": "10 minutos",
+    "efeito": "Você abre seus sentidos para os sons e gestos das feras. Pela duração, você pode entender e se comunicar verbalmente com animais. A inteligência deles limita o que podem dizer, mas geralmente conhecem informações sobre áreas próximas, monstros que viram ou eventos que ocorreram nas últimas 24 horas. Você pode tentar persuadi-los a lhe fazer um pequeno favor."
+  },
+  {
+    "id": "salto",
+    "tipo": "nível 1",
+    "nome": "Salto",
+    "dominios": ["primordial", "natural"],
+    "custo": "1 PA + 1 PM",
+    "alcance": "Toque",
+    "duracao": "1 minuto",
+    "efeito": "As pernas da criatura tocada são fortalecidas por uma energia primordial. Até o fim da magia, a distância de salto (vertical ou horizontal) do alvo é triplicada. O alvo não sofre dano de queda se o salto for parte do movimento da magia e a altura não exceder a distância saltada."
+  },
+  {
+    "id": "amizade-animal",
+    "tipo": "nível 1",
+    "nome": "Amizade Animal",
+    "dominios": ["primordial", "natural"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Médio",
+    "duracao": "24 horas",
+    "efeito": "Você usa energias naturais para acalmar uma fera. O alvo deve realizar um teste de Sabedoria (com Vantagem se a fera tiver Inteligência maior que 3). Se falhar, ela fica Enfeitiçada e não atacará você ou seus aliados, a menos que seja provocada. Se você ou seus aliados ferirem a fera, a magia acaba imediatamente.",
+    "pm_aprimoramento": { "nome": "Encanto Coletivo", "custo": 1, "efeito": "Sua canção da natureza afeta uma fera adicional que esteja a até uma distância média da primeira." }
+  },
+    {
     "id": "cativar",
+    "tipo": "nível 2",
     "nome": "Cativar",
-    "dominios": ["arcano", "astral"],
+    "dominios": ["astral", "arcano"],
     "custo": "2 PA + 2 PM",
     "alcance": "Longo",
     "duracao": "1 minuto",
-    "efeito": "Alvos que falham em Sabedoria têm desvantagem em Percepção para notar qualquer um exceto você."
+    "efeito": "Você tece palavras ou sons que prendem a atenção de todos ao redor. Cada criatura à sua escolha em um raio longo deve fazer um teste de Sabedoria. Se falhar, o alvo tem Desvantagem em testes de Percepção para notar qualquer criatura que não seja você. A magia acaba se você for atacado, ficar incapacitado ou se o alvo não puder mais te ouvir. É a distração perfeita para permitir que seus aliados passem furtivamente."
   },
   {
     "id": "coroadaloucura",
+    "tipo": "nível 2",
     "nome": "Coroa da Loucura",
     "dominios": ["profano"],
     "custo": "2 PA + 2 PM",
     "alcance": "Muito Longo",
-    "duracao": "Até 1 minuto",
-    "efeito": "Enfeitiça um humanoide para atacar uma criatura à sua escolha. Exige 2 PA por turno para manter."
+    "duracao": "Até 1 minuto (Concentração)",
+    "efeito": "Uma coroa de espinhos retorcidos de energia sombria surge na cabeça de um humanoide. O alvo deve passar em um teste de Sabedoria ou ficará Enfeitiçado. Enquanto estiver sob o efeito, a criatura é obrigada a usar sua ação de ataque contra uma criatura que você escolher antes de se mover no turno dela. Você deve gastar 2 PA em cada um dos seus turnos para manter o controle mental; se não o fizer, a magia encerra."
   },
   {
     "id": "despedacar",
+    "tipo": "nível 2",
     "nome": "Despedaçar",
     "dominios": ["elemental", "arcano"],
     "custo": "2 PA + 2 PM",
     "alcance": "Longo",
     "duracao": "Instantânea",
-    "efeito": "Som explosivo causa 5 de dano trovejante em uma esfera de 3 metros. Objetos de pedra/metal têm desvantagem.",
-    "pm_aprimoramento": { "nome": "Vibração Sônica", "custo": 1, "efeito": "O dano aumenta em 1." }
+    "efeito": "Um som agudo e ensurdecedor explode em um ponto escolhido. Cada criatura em um raio de 3m deve fazer um teste de Constituição. Se falhar, sofre 5 de dano trovejante; se passar, sofre metade. Criaturas feitas de materiais inorgânicos (pedra, cristal, metal) têm Desvantagem no teste. Objetos não mágicos que não estejam sendo carregados sofrem o dano automaticamente e podem se quebrar.",
+    "pm_aprimoramento": { "nome": "Vibração Sônica", "custo": 1, "efeito": "A frequência torna-se ainda mais destrutiva, aumentando o dano em +1 para cada PM extra." }
   },
   {
     "id": "escuridao",
+    "tipo": "nível 2",
     "nome": "Escuridão",
     "dominios": ["arcano", "profano"],
     "custo": "2 PA + 2 PM",
     "alcance": "Longo",
-    "duracao": "Até 10 minutos",
-    "efeito": "Cria uma esfera de escuridão mágica que bloqueia visão no escuro e luz não-mágica."
+    "duracao": "Até 10 minutos (Concentração)",
+    "efeito": "Uma escuridão mágica emana de um ponto, preenchendo uma esfera de um raio curto. Visão no Escuro não funciona aqui, e luzes não mágicas não podem iluminar a área. Se o ponto de origem for um objeto que você está segurando, a escuridão se move com você. Cobrir o objeto (colocá-lo no bolso, por exemplo) bloqueia a escuridão temporariamente."
   },
   {
     "id": "imobilizarpessoa",
+    "tipo": "nível 2",
     "nome": "Imobilizar Pessoa",
     "dominios": ["astral", "arcano"],
     "custo": "2 PA + 2 PM",
     "alcance": "Longo",
-    "duracao": "Até 1 minuto",
-    "efeito": "Paralisa um humanoide que falhar no teste de Sabedoria.",
-    "pm_aprimoramento": { "nome": "Paralisia em Grupo", "custo": 1, "efeito": "Afeta um humanoide adicional a até 9m do primeiro." }
+    "duracao": "Até 1 minuto (Concentração)",
+    "efeito": "Você tenta paralisar um humanoide. O alvo deve passar em um teste de Sabedoria ou ficará Paralisado. Ao final de cada turno do alvo, ele pode repetir o teste para tentar encerrar o efeito.",
+    "pm_aprimoramento": { "nome": "Paralisia em Grupo", "custo": 1, "efeito": "Suas correntes mentais se dividem, permitindo afetar um humanoide adicional que esteja a até 9m do primeiro." }
   },
   {
     "id": "invisibilidade",
+    "tipo": "nível 2",
     "nome": "Invisibilidade",
     "dominios": ["astral", "arcano"],
     "custo": "2 PA + 2 PM",
     "alcance": "Toque",
-    "duracao": "Até 1 hora",
-    "efeito": "Torna uma criatura invisível até que ela ataque ou conjure uma magia.",
-    "pm_aprimoramento": { "nome": "Invisibilidade Coletiva", "custo": 1, "efeito": "Pode afetar um alvo adicional." }
+    "duracao": "Até 1 hora (Concentração)",
+    "efeito": "Uma criatura tocada torna-se invisível. Tudo o que ela carrega ou veste também desaparece. A magia acaba imediatamente se o alvo realizar um ataque ou conjurar uma magia. O alvo ainda pode ser detectado por rastros, cheiro ou barulho, mas ataques contra ele têm Desvantagem e ele tem Vantagem em ataques realizados enquanto invisível.",
+    "pm_aprimoramento": { "nome": "Invisibilidade Coletiva", "custo": 1, "efeito": "Você pode estender o manto para uma criatura adicional que esteja em contato com você no momento da conjuração." }
   },
   {
     "id": "nuvemdeadagas",
+    "tipo": "nível 2",
     "nome": "Nuvem de Adagas",
     "dominios": ["arcano"],
     "custo": "2 PA + 2 PM",
     "alcance": "Longo",
-    "duracao": "Até 1 minuto",
-    "efeito": "Cria um cubo de adagas giratórias que causa 3 de dano cortante. Pode ser movida com 1 PA.",
-    "pm_aprimoramento": { "nome": "Lâminas Afiadas", "custo": 1, "efeito": "O dano aumenta em 1." }
+    "duracao": "Até 1 minuto (Concentração)",
+    "efeito": "Você conjura uma nuvem rodopiante de adagas mágicas em um cubo de 1,5m. Qualquer criatura que entrar na área pela primeira vez em um turno ou começar o turno ali sofre 3 de dano cortante. Como uma ação (1 PA), você pode mover a nuvem até 6 metros em qualquer direção.",
+    "pm_aprimoramento": { "nome": "Lâminas Afiadas", "custo": 1, "efeito": "As adagas tornam-se serrilhadas, aumentando o dano em +1." }
   },
   {
     "id": "passonebuloso",
+    "tipo": "nível 2",
     "nome": "Passo Nebuloso",
     "dominios": ["astral", "arcano"],
     "custo": "1 PA + 2 PM",
     "alcance": "Pessoal",
     "duracao": "Instantânea",
-    "efeito": "Teleporta você instantaneamente para um espaço vazio visível a distância média."
+    "efeito": "Em um piscar de olhos, você é envolvido por uma névoa prateada e desaparece. Você se teleporta instantaneamente para um local vazio que você possa ver a uma distância de até 9 metros (Alcance Médio). Por custar apenas 1 PA, você pode usar esse feitiço mais de uma vez por rodada, evitando teste de atletismo por movimentos repetitivos mas ainda recebendo penalidades por conjurações consecutivas."
   },
   {
     "id": "patasdearanha",
+    "tipo": "nível 2",
     "nome": "Patas de Aranha",
-    "dominios": ["arcano"],
+    "dominios": ["primordial", "natural", "arcano"],
     "custo": "2 PA + 2 PM",
     "alcance": "Toque",
-    "duracao": "1 hora",
-    "efeito": "Permite escalar superfícies verticais e tetos com as mãos livres."
+    "duracao": "1 hora (Concentração)",
+    "efeito": "Uma criatura voluntária ganha a habilidade de se mover por superfícies verticais e até pelo teto, mantendo as mãos livres. O alvo ganha velocidade de escalada igual à sua velocidade de caminhada. Ideal para arqueiros que buscam o terreno elevado ou para infiltrações em castelos."
   },
   {
     "id": "raiodoenfraquecimento",
+    "tipo": "nível 2",
     "nome": "Raio do Enfraquecimento",
     "dominios": ["profano"],
     "custo": "2 PA + 2 PM",
     "alcance": "Longo",
-    "duracao": "Até 1 minuto",
-    "efeito": "Um raio negro faz com que ataques de Força do alvo causem apenas metade do dano."
+    "duracao": "Até 1 minuto (Concentração)",
+    "efeito": "Um raio de energia negra e debilitante dispara de seus dedos. Faça um ataque mágico à distância. Se atingir, o alvo murcha visivelmente: até o fim da magia, ele causa apenas metade do dano em ataques que utilizem o atributo Força. Ao final de cada turno do alvo, ele pode fazer um teste de Constituição para tentar quebrar a maldição."
   },
   {
     "id": "reflexos",
+    "tipo": "nível 2",
     "nome": "Reflexos",
-    "dominios": ["arcano", "astral"],
+    "dominios": ["astral", "arcano"],
     "custo": "2 PA + 2 PM",
     "alcance": "Pessoal",
     "duracao": "1 minuto",
-    "efeito": "Cria três duplicatas ilusórias que podem desviar ataques direcionados a você."
+    "efeito": "Três duplicatas ilusórias de você aparecem no seu espaço físico. Elas imitam seus movimentos e trocam de lugar constantemente. Ao receber um ataque, se você tiver três duplicatas, você deve rolar um 6 ou maior para mudar o alvo do ataque para uma duplicata. Com duas duplicatas, você deve rolar um 8 ou maior. Com uma duplicata, você deve rolar um 11 ou maior. Uma cópia possui uma CA de 10 + sua Dex. Se o ataque atingir uma cópia, a cópia é destruída. O efeito acaba quando todas as cópias forem eliminadas."
   },
   {
     "id": "sugestao",
+    "tipo": "nível 2",
     "nome": "Sugestão",
-    "dominios": ["arcano", "astral"],
+    "dominios": ["astral", "arcano"],
     "custo": "2 PA + 2 PM",
     "alcance": "Médio",
-    "duracao": "Até 8 horas",
-    "efeito": "Influencia uma criatura a seguir um curso de ação razoável sugerido por você."
+    "duracao": "Até 8 horas (Concentração)",
+    "efeito": "Você sugere um curso de ação (limitado a uma ou duas frases) e influencia magicamente uma criatura que possa te entender. A sugestão deve parecer razoável (pedir para alguém se apunhalar anula a magia). Se o alvo falhar no teste de Sabedoria, ele seguirá a instrução até completá-la. Se a condição não for cumprida em 8 horas, a magia encerra."
+  },
+  {
+    "id": "passos-sem-pegadas",
+    "tipo": "nível 2",
+    "nome": "Passos sem Pegadas",
+    "dominios": ["elemental", "arcano", "natural"],
+    "custo": "2 PA + 2 PM",
+    "alcance": "Pessoal (Raio médio)",
+    "duracao": "Até 1 hora (Concentração)",
+    "efeito": "Uma aura de sombras e silêncio emana de você. Pela duração, você e qualquer aliado a até 9m de você recebem +5 em testes de Furtividade e não podem ser rastreados exceto por meios mágicos. O grupo não deixa pegadas ou odores, e o som de passos e armaduras é abafado pela névoa mágica."    
+  },
+  {
+    "id": "pele-de-arvore",
+    "tipo": "nível 2",
+    "nome": "Pele de Árvore",
+    "dominios": ["natural"],
+    "custo": "2 PA + 2 PM",
+    "alcance": "Toque",
+    "duracao": "Até 1 hora (Concentração)",
+    "efeito": "A pele de uma criatura voluntária assume uma aparência de casca de árvore. O alvo recebe RD 1 contra danos físicos. Além disso, se a Defesa natural do alvo for menor que 17, ela torna-se 17 enquanto a magia durar.",
+    "pm_aprimoramento": { "nome": "Endurecer", "custo": 1, "efeito": "A casca torna-se tão dura quanto ferro, aumentando a RD em +1 por PM extra." }
+  },
+  {
+    "id": "crescer-espinhos",
+    "tipo": "nível 2",
+    "nome": "Crescer Espinhos",
+    "dominios": ["natural"],
+    "custo": "2 PA + 2 PM",
+    "alcance": "Longo",
+    "duracao": "Até 10 minutos (Concentração)",
+    "efeito": "O solo em um raio de 6m torna-se retorcido e coberto de espinhos e gavinhas. A área é considerada Terreno Difícil. Sempre que uma criatura se mover dentro da área, ela sofre 2 de dano perfurante para cada nível de movimento que se deslocar. Os espinhos são camuflados: uma criatura que não tenha visto a conjuração deve passar em Percepção para notar o perigo antes de entrar na área.",
+    "pm_aprimoramento": { "nome": "Espinhos Dilacerantes", "custo": 1, "efeito": "Os espinhos tornam-se maiores, aumentando o dano por movimento em +1." }
+  },
+  {
+    "id": "sentido-bestial",
+    "tipo": "nível 2",
+    "nome": "Sentido Bestial",
+    "dominios": ["primordial", "natural"],
+    "custo": "2 PA + 2 PM",
+    "alcance": "Toque",
+    "duracao": "Até 1 hora (Concentração)",
+    "efeito": "Você toca uma fera voluntária e transfere sua consciência para ela. Enquanto a magia durar, você pode usar sua ação para ver através dos olhos e ouvir pelos ouvidos do animal, usando os sentidos dele (como Visão no Escuro). Enquanto estiver nos sentidos da fera, seu corpo real fica cego e surdo."
+  },
+  {
+    "id": "chicote-de-espinhos",
+    "tipo": "truque",
+    "nome": "Chicote de Espinhos",
+    "dominios": ["natural", "elemental"],
+    "custo": "2 PA",
+    "alcance": "médio",
+    "duracao": "Instantânea",
+    "efeito": "Você cria uma vinha longa e espinhosa que chicoteia a partir de sua mão. Realize um ataque mágico corpo a corpo (mesmo à distância). Se atingir, causa 2 de dano perfurante. Se o alvo for de tamanho Médio ou menor, ele é puxado em uma distância curta em sua direção.",
+    "niveis_maiores": "O dano aumenta em +1 nos níveis 5, 11 e 17."
+  },
+  {
+    "id": "consertar",
+    "tipo": "truque",
+    "nome": "Consertar",
+    "dominios": ["arcano"],
+    "custo": "2 PA (conjuração de 1 min)",
+    "alcance": "Toque",
+    "duracao": "Instantânea",
+    "efeito": "Repara uma única quebra ou fissura em um objeto (um elo de corrente, uma chave partida, um odre vazando). O dano não pode ter mais de 30cm. Pode reparar itens mágicos fisicamente, mas não restaura suas propriedades mágicas perdidas."
+  },
+  {
+    "id": "criar-chamas",
+    "tipo": "truque",
+    "nome": "Criar Chamas",
+    "dominios": ["elemental", "natural", "arcano"],
+    "custo": "2 PA",
+    "alcance": "Pessoal (médio para arremesso)",
+    "duracao": "10 minutos",
+    "efeito": "Uma chama surge em sua mão, iluminando uma distância curta de luz plena. Ela não queima você. Você pode usar uma ação para arremessá-la em um alvo a até uma distância média. Realize um ataque mágico à distância; se atingir, causa 2 de dano de fogo e a magia encerra.",
+    "niveis_maiores": "O dano do arremesso aumenta em +1 nos níveis 5, 11 e 17."
+  },
+  {
+    "id": "druidismo",
+    "tipo": "truque",
+    "nome": "Druidismo",
+    "dominios": ["natural"],
+    "custo": "2 PA",
+    "alcance": "médio",
+    "duracao": "Instantânea",
+    "efeito": "Um guia básico das forças naturais. Permite: 1) Prever o clima das próximas 24h com um símbolo ilusório. 2) Fazer flores desabrocharem ou sementes brotarem. 3) Criar efeitos sensoriais inofensivos (folhas caindo, cheiro de terra). 4) Acender/apagar velas e pequenas fogueiras."
+  },
+  {
+    "id": "orientacao",
+    "tipo": "truque",
+    "nome": "Orientação",
+    "dominios": ["astral", "celestial"],
+    "custo": "2 PA",
+    "alcance": "Toque",
+    "duracao": "Concentração, até 1 minuto",
+    "efeito": "Você toca um aliado e sussurra palavras de suporte ou premonição. Até o fim da magia, o alvo pode escolher adicionar +2 em um teste de atributo/perícia à escolha dele. Após o uso, a magia termina."
+  },
+  {
+    "id": "resistencia",
+    "tipo": "truque",
+    "nome": "Resistência",
+    "dominios": ["astral", "celestial"],
+    "custo": "2 PA",
+    "alcance": "Toque",
+    "duracao": "Concentração, até 1 minuto",
+    "efeito": "Fortalece a determinação da criatura. O alvo pode adicionar +2 em um teste de Resistência (Salvaguarda) de sua escolha antes da magia acabar. O bônus deve ser decidido antes ou logo após a rolagem."
+  },
+  {
+    "id": "constricao",
+    "tipo": "nível 1",
+    "nome": "Constrição",
+    "dominios": ["natural"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Longo",
+    "duracao": "Concentração, até 1 minuto",
+    "efeito": "Vinhas brotam do solo em um quadrado de 6m. A área torna-se terreno difícil. Criaturas na área devem passar em teste de Resistência de Força ou ficarão Impedidas (não se movem, sofrem ônus em Defesa). A criatura pode usar sua ação para tentar se libertar com um novo teste de Força.",
+    "pm_aprimoramento": { "nome": "Vinhas de Ferro", "custo": 2, "efeito": "O teste de resistência do alvo é feito com Desvantagem." }
+  },
+  {
+    "id": "criar-ou-destruir-agua",
+    "tipo": "nível 1",
+    "nome": "Criar ou Destruir Água",
+    "dominios": ["elemental", "natural", "arcano"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Médio",
+    "duracao": "Instantânea",
+    "efeito": "Você manifesta ou consome o elemento. Criar: Gera 30 litros de água em um recipiente ou faz chover em um cubo de 9m (apaga fogueiras). Destruir: Remove 30 litros de água de um recipiente ou dissipa névoas em um cubo de 9m.",
+    "pm_aprimoramento": { "nome": "Volume Hidráulico", "custo": 2, "efeito": "Aumenta em 30 litros ou 2m no cubo ." }
+  },
+  {
+    "id": "curar-ferimentos",
+    "tipo": "nível 1",
+    "nome": "Curar Ferimentos",
+    "dominios": ["celestial"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Toque",
+    "duracao": "Instantânea",
+    "efeito": "Uma onda de vitalidade restaura a carne. O alvo recupera 2 PV. Não afeta mortos-vivos ou constructos.",
+    "pm_aprimoramento": { "nome": "Sopro de Vida", "custo": 1, "efeito": "A cura aumenta em +2 PV." }
+  },
+  {
+    "id": "detectar-magia",
+    "tipo": "nível 1",
+    "nome": "Detectar Magia",
+    "dominios": ["arcano"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "médio",
+    "duracao": "Concentração, até 10 minutos",
+    "efeito": "Seus olhos brilham com percepção arcana. Você sente a presença de magia a até uma distância média. Pode ver uma aura ao redor de objetos/seres mágicos e identificar seu domínio. Bloqueado por 30cm de rocha ou 2cm de metal."
+  },
+  {
+    "id": "detectar-veneno-e-doenca",
+    "tipo": "nível 1",
+    "nome": "Detectar Veneno e Doença",
+    "dominios": ["celestial"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "médio",
+    "duracao": "Concentração, até 10 minutos",
+    "efeito": "Você sente a corrupção no ar. Identifica a localização e tipo de venenos, criaturas venenosas e doenças dentro do alcance. Essencial para evitar emboscadas de serpentes ou detectar comida envenenada."
+  },
+  {
+    "id": "falar-com-plantas",
+    "tipo": "nível 1",
+    "nome": "Falar com Plantas",
+    "dominios": ["natural"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Pessoal (9m)",
+    "duracao": "10 minutos",
+    "efeito": "As plantas ganham consciência limitada. Você pode interrogá-las sobre quem passou por ali ou pedir que transformem terreno difícil em normal (e vice-versa). Elas podem mover galhos, mas não podem se desenraizar."
+  },
+  {
+    "id": "fogo-das-fadas",
+    "tipo": "nível 1",
+    "nome": "Fogo das Fadas",
+    "dominios": ["natural", "astral"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Médio",
+    "duracao": "Concentração, até 1 minuto",
+    "efeito": "Objetos e seres em um cubo de 6m brilham com cores vibrantes. Alvos que falharem em Destreza são delineados: ataques contra eles têm Vantagem e eles não podem se beneficiar de invisibilidade.",
+    "pm_aprimoramento": { "nome": "Brilho Intenso", "custo": 1, "efeito": "Alvos delineados também sofrem -1 em testes de Furtividade." }
+  },
+  {
+    "id": "nevoa-obscurecente",
+    "tipo": "nível 1",
+    "nome": "Névoa Obscurecente",
+    "dominios": ["elemental", "natural", "arcano"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Longo",
+    "duracao": "1 hora",
+    "efeito": "Cria uma esfera de névoa de 6m de raio. A área é considerada em escuridão densa (visão bloqueada). Ventos fortes dispersam a névoa imediatamente.",
+    "pm_aprimoramento": { "nome": "Névoa Espessa", "custo": 1, "efeito": "Aumenta o raio em 6m por PM." }
+  },
+  {
+    "id": "onda-trovejante",
+    "tipo": "nível 1",
+    "nome": "Onda Trovejante",
+    "dominios": ["elemental", "arcano"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Pessoal (Cubo de 4.5m)",
+    "duracao": "Instantânea",
+    "efeito": "Uma explosão sonora emana de você. Criaturas na área devem passar em Resistência de Constituição: falha causa 4 de dano trovejante e empurra 3m. Sucesso causa metade do dano e não empurra. O estrondo é ouvido a 90m.",
+    "pm_aprimoramento": { "nome": "Impacto Sônico", "custo": 1, "efeito": "O dano aumenta em +2." }
+  },
+  {
+    "id": "palavra-curativa",
+    "tipo": "nível 1",
+    "nome": "Palavra Curativa",
+    "dominios": ["celestial", "arcano"],
+    "custo": "1 PA (Ação Rápida) + 1 PM",
+    "alcance": "Longo",
+    "duracao": "Instantânea",
+    "efeito": "Um comando sagrado ou arcano cura 1 PV de um alvo que você possa ver. Por custar apenas 1 PA, permite curar e ainda realizar outra ação no mesmo turno.",
+    "pm_aprimoramento": { "nome": "Vigência", "custo": 1, "efeito": "Aumenta a cura em +1 PV." }
+  },
+  {
+    "id": "passos-longos",
+    "tipo": "nível 1",
+    "nome": "Passos Longos",
+    "dominios": ["primordial", "natural", "arcano"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Toque",
+    "duracao": "1 hora",
+    "efeito": "As pernas do alvo tornam-se incrivelmente ágeis. O deslocamento aumenta em 3 metros (aproximadamente 2 níveis de movimento extras).",
+    "pm_aprimoramento": { "nome": "Marcha Forçada", "custo": 1, "efeito": "Pode afetar um aliado adicional." }
+  },
+  {
+    "id": "purificar-alimentos",
+    "tipo": "nível 1",
+    "nome": "Purificar Alimentos",
+    "dominios": ["natural", "celestial"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Curto",
+    "duracao": "Instantânea",
+    "efeito": "Livra toda comida e bebida não-mágica de venenos e doenças em uma esfera de 1,5m. Não recupera comida já apodrecida, mas a torna segura para consumo."
   }
 ]

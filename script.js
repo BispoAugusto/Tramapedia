@@ -1,3 +1,14 @@
+const coresDominios = {
+    "arcano": "#8e44ad",
+    "profano": "#c0392b",
+    "elemental": "#7cfc00",
+    "primordial": "#20b2aa",
+    "celestial": "#ffd700",
+    "abissal": "#000000",
+    "astral": "#87ceeb",
+    "natural": "#228b22"
+};
+
 let magias = [];
 let favoritos = JSON.parse(localStorage.getItem('tramapedia_favs')) || [];
 
@@ -6,14 +17,13 @@ const searchInput = document.getElementById('searchBar');
 const domainFilter = document.getElementById('domainFilter');
 const btnFavs = document.getElementById('btnFavorites');
 
-// Carregar Dados
 async function init() {
     try {
         const response = await fetch('magias.json');
         magias = await response.json();
         render();
     } catch (err) {
-        container.innerHTML = "<p>Erro ao carregar banco de dados.</p>";
+        container.innerHTML = "<p>Erro ao carregar banco de dados. Verifique o arquivo magias.json.</p>";
     }
 }
 
@@ -33,15 +43,18 @@ function render() {
     
     filtradas.forEach(magia => {
         const isFav = favoritos.includes(magia.id);
-        const domPrincipal = magia.dominios[0].toLowerCase();
+        const d1 = magia.dominios[0].toLowerCase();
+        const d2 = magia.dominios[1] ? magia.dominios[1].toLowerCase() : d1;
         
         const card = document.createElement('div');
         card.className = 'spell-card';
-        card.setAttribute('data-domain', domPrincipal);
+        card.style.setProperty('--dom-color-1', coresDominios[d1] || "#555");
+        card.style.setProperty('--dom-color-2', coresDominios[d2] || "#555");
         
         card.innerHTML = `
             <div class="spell-header" onclick="toggleExpand(this)">
                 <div class="spell-info-basic">
+                    <span class="spell-type-tag">${magia.tipo || 'Magia'}</span>
                     <h3>${magia.nome}</h3>
                     <div class="domains-list">${magia.dominios.join(' | ')}</div>
                 </div>
@@ -51,31 +64,21 @@ function render() {
             </div>
             
             <div class="spell-content">
-                <div class="stats-row">
-                    <span><strong>Custo:</strong> ${magia.custo}</span>
-                    <span><strong>Alcance:</strong> ${magia.alcance}</span>
-                    <span><strong>Duração:</strong> ${magia.duracao}</span>
+                <div class="stats-grid">
+                    <div><span>Custo:</span><br><b>${magia.custo}</b></div>
+                    <div><span>Alcance:</span><br><b>${magia.alcance}</b></div>
+                    <div style="grid-column: span 2"><span>Duração:</span><br><b>${magia.duracao}</b></div>
                 </div>
                 
                 <div class="effect-text">${magia.efeito}</div>
 
-                ${magia.pa_aprimoramento ? `
-                    <div class="upgrade-box">
-                        <strong>${magia.pa_aprimoramento.nome} (+${magia.pa_aprimoramento.custo} PA):</strong>
-                        ${magia.pa_aprimoramento.efeito}
-                    </div>
-                ` : ''}
-
-                ${magia.pm_aprimoramento ? `
-                    <div class="upgrade-box">
-                        <strong>${magia.pm_aprimoramento.nome} (+${magia.pm_aprimoramento.custo} PM):</strong>
-                        ${magia.pm_aprimoramento.efeito}
-                    </div>
-                ` : ''}
-
+                ${renderUpgrade(magia.pa_aprimoramento, "PA")}
+                ${renderUpgrade(magia.pm_aprimoramento, "PM")}
+                
                 ${magia.niveis_maiores ? `
                     <div class="upgrade-box">
-                        <strong>Em níveis maiores:</strong> ${magia.niveis_maiores}
+                        <strong>Em níveis maiores:</strong>
+                        ${magia.niveis_maiores}
                     </div>
                 ` : ''}
             </div>
@@ -84,25 +87,25 @@ function render() {
     });
 }
 
-// Alternar Expansão
-window.toggleExpand = (headerElement) => {
-    const card = headerElement.parentElement;
-    card.classList.toggle('expanded');
-};
+function renderUpgrade(data, label) {
+    if (!data) return '';
+    return `
+        <div class="upgrade-box">
+            <strong>${data.nome} (+${data.custo}${label}):</strong>
+            ${data.efeito}
+        </div>
+    `;
+}
 
-// Gerenciar Favoritos
+window.toggleExpand = (header) => header.parentElement.classList.toggle('expanded');
+
 window.toggleFav = (event, id) => {
-    event.stopPropagation(); // Impede que o clique no favorito abra/feche o card
-    if (favoritos.includes(id)) {
-        favoritos = favoritos.filter(f => f !== id);
-    } else {
-        favoritos.push(id);
-    }
+    event.stopPropagation();
+    favoritos = favoritos.includes(id) ? favoritos.filter(f => f !== id) : [...favoritos, id];
     localStorage.setItem('tramapedia_favs', JSON.stringify(favoritos));
     render();
 };
 
-// Eventos de Filtro
 searchInput.addEventListener('input', render);
 domainFilter.addEventListener('change', render);
 btnFavs.addEventListener('click', () => {

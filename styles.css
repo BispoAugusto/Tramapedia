@@ -2,21 +2,21 @@
     /* Cores dos Domínios */
     --color-arcano: #8e44ad;
     --color-profano: #c0392b;
-    --color-elemental: #7cfc00; /* verde claro */
-    --color-primordial: #20b2aa; /* azul verde (LightSeaGreen) */
-    --color-celestial: #ffd700; /* dourado */
+    --color-elemental: #7cfc00;
+    --color-primordial: #20b2aa;
+    --color-celestial: #ffd700;
     --color-abissal: #000000;
-    --color-astral: #87ceeb; /* azul claro */
-    --color-natural: #228b22; /* verde */
+    --color-astral: #87ceeb;
+    --color-natural: #228b22;
     
-    --bg-body: #121212;
-    --bg-card: #1e1e1e;
+    --bg-body: #0f0f0f;
+    --bg-card: #1a1a1a;
     --text-main: #ffffff;
-    --text-muted: #aaaaaa;
+    --text-muted: #888888;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Segoe UI', Roboto, sans-serif;
     background-color: var(--bg-body);
     color: var(--text-main);
     margin: 0;
@@ -25,11 +25,10 @@ body {
 
 header h1 {
     text-align: center;
-    letter-spacing: 8px;
-    font-size: 3rem;
+    letter-spacing: 10px;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     margin-bottom: 40px;
     color: var(--color-celestial);
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
 /* Filtros */
@@ -37,19 +36,17 @@ header h1 {
     display: flex;
     gap: 10px;
     justify-content: center;
-    margin-bottom: 30px;
-    position: sticky;
-    top: 10px;
-    z-index: 100;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 input, select, .btn-action {
-    padding: 12px 15px;
-    border-radius: 8px;
+    padding: 12px;
+    border-radius: 6px;
     border: 1px solid #333;
-    background: var(--bg-card);
+    background: #222;
     color: white;
-    cursor: pointer;
+    outline: none;
 }
 
 .btn-action.active {
@@ -58,119 +55,131 @@ input, select, .btn-action {
     font-weight: bold;
 }
 
-/* Grid */
+/* --- GRID DE MAGIAS --- */
 .spell-grid {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    /* Cria colunas de no mínimo 280px. Em telas largas, chegará a 4 colunas ou mais */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 /* Card de Magia */
 .spell-card {
     background: var(--bg-card);
-    border-radius: 10px;
-    width: 100%;
-    min-width: 240px;
-    max-width: 400px;
-    border-left: 6px solid var(--domain-color);
+    border-radius: 12px;
+    position: relative;
     overflow: hidden;
-    transition: all 0.3s ease;
     cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: fit-content;
+    border: 1px solid #222;
 }
 
 .spell-card:hover {
-    background: #252525;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
 
-/* Header do Card (Sempre visível) */
+/* Borda lateral com Gradiente */
+.spell-card::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 6px;
+    background: linear-gradient(to bottom, var(--dom-color-1), var(--dom-color-2));
+    z-index: 2;
+}
+
 .spell-header {
-    padding: 15px 20px;
+    padding: 15px 15px 15px 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .spell-info-basic h3 {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.2;
 }
 
-.spell-info-basic .domains-list {
-    font-size: 0.75rem;
-    color: var(--domain-color);
+.spell-type-tag {
+    display: inline-block;
+    font-size: 0.65rem;
     text-transform: uppercase;
+    background: rgba(255,255,255,0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    color: var(--text-muted);
+}
+
+.domains-list {
+    font-size: 0.7rem;
     font-weight: bold;
-    margin-top: 4px;
+    text-transform: uppercase;
+    margin-top: 6px;
+    color: var(--dom-color-1);
 }
 
 .fav-btn {
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     cursor: pointer;
-    color: var(--text-muted);
-    transition: transform 0.2s;
+    color: #444;
+    padding: 0;
 }
-
 .fav-btn.is-fav { color: var(--color-celestial); }
 
-/* Conteúdo Expansível (Escondido por padrão) */
+/* Conteúdo Expansível */
 .spell-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease-out, padding 0.3s ease;
+    transition: all 0.4s ease;
     padding: 0 20px;
-    border-top: 0 solid #333;
-}
-
-.spell-card.expanded .spell-content {
-    max-height: 1000px; /* Valor alto para permitir expansão */
-    padding: 20px;
-    border-top-width: 1px;
-}
-
-/* Detalhes Internos */
-.stats-row {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.85rem;
-    background: rgba(0,0,0,0.3);
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-.effect-text {
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.upgrade-box {
-    border-left: 2px solid var(--domain-color);
-    padding-left: 15px;
-    margin-top: 15px;
     font-size: 0.9rem;
 }
 
-.upgrade-box strong {
-    color: var(--domain-color);
+.spell-card.expanded .spell-content {
+    max-height: 1200px;
+    padding-bottom: 20px;
 }
 
-/* Classes de Cores Dinâmicas */
-.spell-card[data-domain="arcano"] { --domain-color: var(--color-arcano); }
-.spell-card[data-domain="profano"] { --domain-color: var(--color-profano); }
-.spell-card[data-domain="elemental"] { --domain-color: var(--color-elemental); }
-.spell-card[data-domain="primordial"] { --domain-color: var(--color-primordial); }
-.spell-card[data-domain="celestial"] { --domain-color: var(--color-celestial); }
-.spell-card[data-domain="abissal"] { --domain-color: var(--color-abissal); }
-.spell-card[data-domain="astral"] { --domain-color: var(--color-astral); }
-.spell-card[data-domain="natural"] { --domain-color: var(--color-natural); }
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    background: rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+}
 
-/* Print / Export */
+.stats-grid span { color: var(--text-muted); }
+.stats-grid b { color: #fff; }
+
+.effect-text {
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+.upgrade-box {
+    border-left: 2px solid var(--dom-color-1);
+    padding-left: 10px;
+    margin-top: 12px;
+    font-size: 0.85rem;
+}
+
+.upgrade-box strong { color: var(--dom-color-1); display: block; margin-bottom: 2px; }
+
+/* Ajustes para Impressão */
 @media print {
-    .filters, .fav-btn { display: none !important; }
-    .spell-content { max-height: none !important; padding: 20px !important; }
-    .spell-card { border: 1px solid #000; break-inside: avoid; }
+    .spell-grid { display: block; }
+    .spell-card { margin-bottom: 20px; page-break-inside: avoid; }
+    .spell-content { max-height: none !important; }
 }
