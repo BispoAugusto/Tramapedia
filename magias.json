@@ -1,50 +1,296 @@
 [
   {
-    "id": "boladefogo",
-    "nome": "Bola de Fogo",
-    "dominios": ["elemental", "profano"],
-    "custo": "3 PM",
+    "id": "ataquecerteiro",
+    "nome": "Ataque Certeiro",
+    "dominios": ["astral", "arcano"],
+    "custo": "2 PA",
     "alcance": "Médio",
-    "duracao": "Instantânea",
-    "efeito": "Cria uma explosão que causa 6d6 de dano.",
-    "pa_aprimoramento": { "nome": "Explosão Maior", "custo": 2, "efeito": "Aumenta o raio em 3m." },
-    "pm_aprimoramento": { "nome": "Dano Extra", "custo": 1, "efeito": "Soma +1d6 de dano por PM." },
-    "niveis_maiores": "No nível 5, o dano base torna-se 10d6."
+    "duracao": "Até 1 rodada",
+    "efeito": "Você garante uma breve intuição sobre as defesas do alvo. No seu próximo turno, você terá vantagem na primeira jogada de ataque contra ele."
   },
   {
-    "id": "escudomistico",
-    "nome": "Escudo Místico",
+    "id": "maosmagicas",
+    "nome": "Mãos Mágicas",
     "dominios": ["arcano"],
-    "custo": "2 PM",
-    "alcance": "Pessoal",
-    "duracao": "Cena",
-    "efeito": "Cria uma barreira mágica que concede +5 de Defesa.",
-    "pa_aprimoramento": null,
-    "pm_aprimoramento": { "nome": "Reflexo", "custo": 2, "efeito": "Reflete 1d6 de dano a atacantes corpo-a-corpo." },
-    "niveis_maiores": null
+    "custo": "2 PA",
+    "alcance": "Médio",
+    "duracao": "1 minuto",
+    "efeito": "Cria uma mão espectral flutuante para manipular objetos de até 5 quilos. Pode ser movida 9 metros com uma ação."
   },
-    {
-    "id": "escudomistico",
-    "nome": "Escudo Místico",
+  {
+    "id": "protecaocontralaminas",
+    "nome": "Proteção contra Lâminas",
     "dominios": ["arcano"],
-    "custo": "2 PM",
-    "alcance": "Pessoal",
-    "duracao": "Cena",
-    "efeito": "Cria uma barreira mágica que concede +5 de Defesa.",
-    "pa_aprimoramento": null,
-    "pm_aprimoramento": { "nome": "Reflexo", "custo": 2, "efeito": "Reflete 1d6 de dano a atacantes corpo-a-corpo." },
-    "niveis_maiores": null
+    "custo": "2 PA",
+    "alcance": "Médio",
+    "duracao": "1 rodada",
+    "efeito": "Cria um campo de força que concede RD 1 contra dano de concusão, cortante e perfurante de armas.",
+    "pa_aprimoramento": { "nome": "Resistência Maior", "custo": 1, "efeito": "A RD aumenta em 1." }
   },
-    {
-    "id": "escudomistico",
-    "nome": "Escudo Místico",
+  {
+    "id": "rajadadeveneno",
+    "nome": "Rajada de Veneno",
+    "dominios": ["profano", "elemental"],
+    "custo": "2 PA",
+    "alcance": "Muito Curto",
+    "duracao": "Instantânea",
+    "efeito": "Projeta um sopro de gás tóxico. O alvo deve passar em teste de Constituição ou sofre 2 de dano de veneno.",
+    "niveis_maiores": "O dano aumenta em +1 no nível 5 (3), nível 11 (4) e nível 17 (5)."
+  },
+  {
+    "id": "rajadamistica",
+    "nome": "Rajada Mística",
+    "dominios": ["profano", "arcano"],
+    "custo": "2 PA",
+    "alcance": "Muito Longo",
+    "duracao": "Instantânea",
+    "efeito": "Dispara um feixe de energia que causa 1 de dano de força com um ataque à distância.",
+    "niveis_maiores": "Cria mais feixes em níveis elevados: dois no nível 5, três no nível 11 e quatro no nível 17."
+  },
+  {
+    "id": "ilusaomenor",
+    "nome": "Ilusão Menor",
+    "dominios": ["arcano", "astral"],
+    "custo": "2 PA",
+    "alcance": "Muito Longo",
+    "duracao": "1 rodada",
+    "efeito": "Cria um som ou imagem visual estática que cabe em um cubo de 3 metros.",
+    "pa_aprimoramento": { "nome": "Realismo", "custo": 1, "efeito": "Altera a ilusão para parecer mais realista (mudar direção do som ou piscar)." }
+  },
+  {
+    "id": "prestidigitacao",
+    "nome": "Prestidigitação",
     "dominios": ["arcano"],
-    "custo": "2 PM",
+    "custo": "2 PA",
+    "alcance": "Muito Curto",
+    "duracao": "Até 1 hora",
+    "efeito": "Cria efeitos mágicos simples e inofensivos, como faíscas, limpeza de objetos ou pequenas imagens ilusórias."
+  },
+  {
+    "id": "toquearrepiante",
+    "nome": "Toque Arrepiante",
+    "dominios": ["profano"],
+    "custo": "2 PA",
+    "alcance": "Muito Longo",
+    "duracao": "1 rodada",
+    "efeito": "Ataque à distância que causa 2 de dano necrótico e impede o alvo de recuperar vida. Mortos-vivos recebem desvantagem em ataques contra você.",
+    "niveis_maiores": "O dano aumenta em +1 no nível 5 (3), nível 11 (4) e nível 17 (5)."
+  },
+  {
+    "id": "armaduradeagathys",
+    "nome": "Armadura de Agathys",
+    "dominios": ["arcano", "elemental"],
+    "custo": "2 PA + 1 PM",
     "alcance": "Pessoal",
-    "duracao": "Cena",
-    "efeito": "Cria uma barreira mágica que concede +5 de Defesa.",
-    "pa_aprimoramento": null,
-    "pm_aprimoramento": { "nome": "Reflexo", "custo": 2, "efeito": "Reflete 1d6 de dano a atacantes corpo-a-corpo." },
-    "niveis_maiores": null
+    "duracao": "1 hora",
+    "efeito": "Recebe 3 de vida temporária. Enquanto tiver esses pontos, atacantes corpo a corpo sofrem 3 de dano de frio.",
+    "pm_aprimoramento": { "nome": "Fortalecer Gelo", "custo": 1, "efeito": "Aumenta a vida temporária e o dano em 1." }
+  },
+  {
+    "id": "bracodehadar",
+    "nome": "Braço de Hadar",
+    "dominios": ["profano"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Pessoal",
+    "duracao": "Instantânea",
+    "efeito": "Tentáculos causam 2 de dano necrótico em área e impedem reações. Teste de Força reduz dano à metade.",
+    "pm_aprimoramento": { "nome": "Fome Sombria", "custo": 1, "efeito": "O dano aumenta em 1." }
+  },
+  {
+    "id": "bruxaria",
+    "nome": "Bruxaria",
+    "dominios": ["arcano", "profano"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Longo",
+    "duracao": "Até 1 hora",
+    "efeito": "Amaldiçoa um alvo para causar +1 de dano necrótico extra por ataque e dar desvantagem em testes de um atributo.",
+    "pm_aprimoramento": { "nome": "Maldição Potente", "custo": 1, "efeito": "O dano extra aumenta em +1." }
+  },
+  {
+    "id": "compreenderidiomas",
+    "nome": "Compreender Idiomas",
+    "dominios": ["arcano"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Pessoal",
+    "duracao": "1 hora",
+    "efeito": "Entende o significado literal de qualquer idioma falado ou escrito."
+  },
+  {
+    "id": "enfeitiçarpessoa",
+    "nome": "Enfeitiçar Pessoa",
+    "dominios": ["astral", "arcano"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Médio",
+    "duracao": "1 hora",
+    "efeito": "Um humanoide falha em teste de Sabedoria e passa a te considerar um conhecido amigável.",
+    "pm_aprimoramento": { "nome": "Amizade Coletiva", "custo": 1, "efeito": "Pode afetar uma criatura adicional." }
+  },
+  {
+    "id": "escritailusoria",
+    "nome": "Escrita Ilusória",
+    "dominios": ["astral", "arcano"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Toque",
+    "duracao": "10 dias",
+    "efeito": "Cobre um texto com uma ilusão que só pode ser lida por você e criaturas designadas."
+  },
+  {
+    "id": "protecaocontraobememal",
+    "nome": "Proteção contra o Bem e Mal",
+    "dominios": ["astral", "arcano", "celestial"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Toque",
+    "duracao": "Até 10 minutos",
+    "efeito": "Protege contra tipos específicos de criaturas, dando desvantagem em ataques contra o alvo e imunidade a possessão/medo."
+  },
+  {
+    "id": "raiodebruxa",
+    "nome": "Raio de Bruxa",
+    "dominios": ["profano", "elemental"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Médio",
+    "duracao": "Até 1 minuto",
+    "efeito": "Cria um arco elétrico que causa 2 de dano inicial. Pode usar 2 PA nos turnos seguintes para repetir o dano automaticamente.",
+    "pm_aprimoramento": { "nome": "Carga Extra", "custo": 1, "efeito": "O dano inicial aumenta em 1." }
+  },
+  {
+    "id": "recuoacelerado",
+    "nome": "Recuo Acelerado",
+    "dominios": ["arcano"],
+    "custo": "1 PA + 1 PM",
+    "alcance": "Pessoal",
+    "duracao": "Até 10 minutos",
+    "efeito": "Aumenta a velocidade, permitindo usar a ação de Disparada com apenas 1 PA."
+  },
+  {
+    "id": "repreensaoinfernal",
+    "nome": "Repreensão Infernal",
+    "dominios": ["profano", "elemental"],
+    "custo": "Reação (1 PA) + 1 PM",
+    "alcance": "Longo",
+    "duracao": "Instantânea",
+    "efeito": "Reage ao dano envolvendo o atacante em chamas para 3 de dano de fogo (Teste de Destreza reduz à metade).",
+    "pm_aprimoramento": { "nome": "Chamas Vingativas", "custo": 1, "efeito": "O dano aumenta em 1." }
+  },
+  {
+    "id": "servoinvisivel",
+    "nome": "Servo Invisível",
+    "dominios": ["arcano"],
+    "custo": "2 PA + 1 PM",
+    "alcance": "Longo",
+    "duracao": "1 hora",
+    "efeito": "Cria uma força invisível para tarefas simples como limpar ou buscar objetos."
+  },
+  {
+    "id": "cativar",
+    "nome": "Cativar",
+    "dominios": ["arcano", "astral"],
+    "custo": "2 PA + 2 PM",
+    "alcance": "Longo",
+    "duracao": "1 minuto",
+    "efeito": "Alvos que falham em Sabedoria têm desvantagem em Percepção para notar qualquer um exceto você."
+  },
+  {
+    "id": "coroadaloucura",
+    "nome": "Coroa da Loucura",
+    "dominios": ["profano"],
+    "custo": "2 PA + 2 PM",
+    "alcance": "Muito Longo",
+    "duracao": "Até 1 minuto",
+    "efeito": "Enfeitiça um humanoide para atacar uma criatura à sua escolha. Exige 2 PA por turno para manter."
+  },
+  {
+    "id": "despedacar",
+    "nome": "Despedaçar",
+    "dominios": ["elemental", "arcano"],
+    "custo": "2 PA + 2 PM",
+    "alcance": "Longo",
+    "duracao": "Instantânea",
+    "efeito": "Som explosivo causa 5 de dano trovejante em uma esfera de 3 metros. Objetos de pedra/metal têm desvantagem.",
+    "pm_aprimoramento": { "nome": "Vibração Sônica", "custo": 1, "efeito": "O dano aumenta em 1." }
+  },
+  {
+    "id": "escuridao",
+    "nome": "Escuridão",
+    "dominios": ["arcano", "profano"],
+    "custo": "2 PA + 2 PM",
+    "alcance": "Longo",
+    "duracao": "Até 10 minutos",
+    "efeito": "Cria uma esfera de escuridão mágica que bloqueia visão no escuro e luz não-mágica."
+  },
+  {
+    "id": "imobilizarpessoa",
+    "nome": "Imobilizar Pessoa",
+    "dominios": ["astral", "arcano"],
+    "custo": "2 PA + 2 PM",
+    "alcance": "Longo",
+    "duracao": "Até 1 minuto",
+    "efeito": "Paralisa um humanoide que falhar no teste de Sabedoria.",
+    "pm_aprimoramento": { "nome": "Paralisia em Grupo", "custo": 1, "efeito": "Afeta um humanoide adicional a até 9m do primeiro." }
+  },
+  {
+    "id": "invisibilidade",
+    "nome": "Invisibilidade",
+    "dominios": ["astral", "arcano"],
+    "custo": "2 PA + 2 PM",
+    "alcance": "Toque",
+    "duracao": "Até 1 hora",
+    "efeito": "Torna uma criatura invisível até que ela ataque ou conjure uma magia.",
+    "pm_aprimoramento": { "nome": "Invisibilidade Coletiva", "custo": 1, "efeito": "Pode afetar um alvo adicional." }
+  },
+  {
+    "id": "nuvemdeadagas",
+    "nome": "Nuvem de Adagas",
+    "dominios": ["arcano"],
+    "custo": "2 PA + 2 PM",
+    "alcance": "Longo",
+    "duracao": "Até 1 minuto",
+    "efeito": "Cria um cubo de adagas giratórias que causa 3 de dano cortante. Pode ser movida com 1 PA.",
+    "pm_aprimoramento": { "nome": "Lâminas Afiadas", "custo": 1, "efeito": "O dano aumenta em 1." }
+  },
+  {
+    "id": "passonebuloso",
+    "nome": "Passo Nebuloso",
+    "dominios": ["astral", "arcano"],
+    "custo": "1 PA + 2 PM",
+    "alcance": "Pessoal",
+    "duracao": "Instantânea",
+    "efeito": "Teleporta você instantaneamente para um espaço vazio visível a distância média."
+  },
+  {
+    "id": "patasdearanha",
+    "nome": "Patas de Aranha",
+    "dominios": ["arcano"],
+    "custo": "2 PA + 2 PM",
+    "alcance": "Toque",
+    "duracao": "1 hora",
+    "efeito": "Permite escalar superfícies verticais e tetos com as mãos livres."
+  },
+  {
+    "id": "raiodoenfraquecimento",
+    "nome": "Raio do Enfraquecimento",
+    "dominios": ["profano"],
+    "custo": "2 PA + 2 PM",
+    "alcance": "Longo",
+    "duracao": "Até 1 minuto",
+    "efeito": "Um raio negro faz com que ataques de Força do alvo causem apenas metade do dano."
+  },
+  {
+    "id": "reflexos",
+    "nome": "Reflexos",
+    "dominios": ["arcano", "astral"],
+    "custo": "2 PA + 2 PM",
+    "alcance": "Pessoal",
+    "duracao": "1 minuto",
+    "efeito": "Cria três duplicatas ilusórias que podem desviar ataques direcionados a você."
+  },
+  {
+    "id": "sugestao",
+    "nome": "Sugestão",
+    "dominios": ["arcano", "astral"],
+    "custo": "2 PA + 2 PM",
+    "alcance": "Médio",
+    "duracao": "Até 8 horas",
+    "efeito": "Influencia uma criatura a seguir um curso de ação razoável sugerido por você."
   }
 ]

@@ -1,14 +1,14 @@
 [
   {
-    "id": 1,
+    "id": "boladefogo",
     "nome": "Bola de Fogo",
-    "dominios": ["Elemental", "Arcano"],
-    "custo": "1 PA + 1 PM",
+    "dominios": ["elemental", "profano"],
+    "custo": "3 PM",
     "alcance": "Médio",
     "duracao": "Instantânea",
-    "efeito": "Cria uma explosão que causa 3 de dano.",
-    "pa_aprimoramento": { "nome": "Explosão Maior", "custo": 1, "efeito": "A área da explosão aumenta em 1 nível." },
-    "pm_aprimoramento": { "nome": "Dano Extra", "custo": 1, "efeito": "O dano da explosão aumenta em +1" },
-    "niveis_maiores": "No nível 5, o dano base torna-se 5."
+    "efeito": "Cria uma explosão que causa 6d6 de dano.",
+    "pa_aprimoramento": { "nome": "Explosão Maior", "custo": 2, "efeito": "Aumenta o raio em 3m." },
+    "pm_aprimoramento": { "nome": "Dano Extra", "custo": 1, "efeito": "Soma +1d6 de dano por PM." },
+    "niveis_maiores": "No nível 5, o dano base torna-se 10d6."
   }
 ]
